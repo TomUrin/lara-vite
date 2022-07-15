@@ -10,7 +10,6 @@
                     <div class="d-grid gap-2">
                         <a class="btn btn-outline-success mb-5" href="{{route('accounts-index')}}">Click here to see accounts list</a>
                     </div>
-
                     <form class="create" action="{{route('accounts-store')}}" method="post" type="submit">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -28,8 +27,8 @@
                             <div style="color: crimson;">{{ $errors->first('personId') }}</div>
                         </div>
                         <div class="mx-auto">
-  <button type="submit" name="submit" value="send" class="btn btn-outline-success mt-5 btn-lg">Create</button>
-</div>
+                            <button type="submit" name="submit" value="send" class="btn btn-outline-success mt-5 btn-lg">Create</button>
+                        </div>
                         @csrf
                     </form>
                 </div>

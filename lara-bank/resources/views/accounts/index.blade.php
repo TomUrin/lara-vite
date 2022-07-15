@@ -15,7 +15,7 @@ Bank-lara
                     <a class="btn btn-outline-success mb-2" href="{{route('accounts-create')}}">Click here to add new account</a>
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <a class="btn btn-outline-secondary" href="{{route('accounts-index')}}">Reset sorting</a>
+                        <a class="btn btn-outline-secondary mb-2" href="{{route('accounts-index')}}">Reset sorting</a>
                     </div>
                     <table class="table table-hover">
                         <thead>
@@ -44,6 +44,7 @@ Bank-lara
                                 <td scope="row"> {{$account->personId}} </td>
                                 <td scope="row"> {{$account->sum}} </td>
                                 <td scope="row" class="actions">
+                                <a class="btn btn-outline-info btn-sm me-2 " href="{{route('accounts-show', $account->id)}}">SHOW</a>
                                 <a class="btn btn-outline-warning btn-sm me-2 " href="{{route('accounts-edit', $account)}}">EDIT</a>
                                     <form method="POST" action="{{route('accounts-delete', $account)}}">
                                         <button class="btn btn-outline-danger btn-sm" type="submit">DELETE</button>

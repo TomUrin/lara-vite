@@ -72,9 +72,10 @@ class AccountController extends Controller
      * @param  \App\Models\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function show(Account $account)
+    public function show(int $accountId)
     {
-        //
+        $account = Account::where('id', $accountId)->first();
+        return view('accounts.show', ['account' => $account]);
     }
 
     /**
