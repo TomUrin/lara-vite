@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn-outline-secondary, .btn-outline-success {
+    font-size: 20px;
+}
+
+.bi-sort-alpha-down, .bi-sort-down {
+    font-size: 14px;
+    color: #228B22;
+}
+
+.bi-sort-alpha-up, .bi-sort-up {
+    color: #DC143C;
+}
