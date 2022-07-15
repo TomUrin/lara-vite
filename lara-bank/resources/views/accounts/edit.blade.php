@@ -17,7 +17,7 @@
             <th scope="col">NAME</th>
             <th scope="col">SURNAME</th>
             <th scope="col">PERSONAL ID</th>
-            <th scope="col">FUNDS</th>
+            <th scope="col">FUNDS<span><i class="bi bi-currency-euro"></i></span></th>
             <th scope="col">ADD FUNDS</th>
             <th scope="col">DEDUCT FUNDS</th>
         </tr>
@@ -25,13 +25,25 @@
     <form method="post" action="{{route('accounts-update', $account)}}">
         <tbody>
             <tr>
-                <td> {{$account->accNr}} </td>
-                <td> {{$account->name}} </td>
-                <td> {{$account->surname}} </td>
-                <td> {{$account->personId}} </td>
-                <td> {{$account->sum}} </td>
-                <td><input class="input" type="text" name="addFunds" /><button class="btn_add"  type="submit">ADD</button></td>
-                <td><input class="input" type="text" name="deductFunds" /><button class="btn_del"  type="submit">DEDUCT</button></td>
+                <td scope="row"> {{$account->accNr}} </td>
+                <td scope="row"> {{$account->name}} </td>
+                <td scope="row"> {{$account->surname}} </td>
+                <td scope="row"> {{$account->personId}} </td>
+                <td scope="row"> {{$account->sum}} </td>
+                <td scope="row">
+                    <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-currency-euro"></i></span>
+                        <input name="addFunds" type="text" class="form-control">
+                        <button class="btn btn-outline-success btn-sm"  type="submit">ADD</button>
+                    </div>
+                </td>
+                <td scope="row">
+                    <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="bi bi-currency-euro"></i></span>
+                        <input name="deductFunds" type="text" class="form-control">
+                        <button class="btn btn-outline-danger btn-sm"  type="submit">DEDUCT</button>
+                    </div>
+                </td>
             </tr>
         </tbody>
 @csrf

@@ -28,7 +28,7 @@ Bank-lara
                                     <a class="sort" href="{{route('accounts-index', ['sort' => 'surnameUp'])}}"><i class="bi bi-sort-alpha-up"></i></a>
                                 </th>
                                 <th scope="col">PERSONAL ID</th>
-                                <th scope="col">FUNDS &#8364<a class="sort" href="{{route('accounts-index', ['sort' => 'sumDown'])}}"><i class="bi bi-sort-down ms-2"></i></a>
+                                <th scope="col">FUNDS <i class="bi bi-currency-euro"><a class="sort" href="{{route('accounts-index', ['sort' => 'sumDown'])}}"><i class="bi bi-sort-down ms-2"></i></a>
                                     <a class="sort" href="{{route('accounts-index', ['sort' => 'sumUp'])}}"><i class="bi bi-sort-up"></i></a>
                                 </th>
                                 
