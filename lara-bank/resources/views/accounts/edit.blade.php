@@ -1,17 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<button class="btn_create"><a class="link" href="{{route('accounts-index')}}">Back to the accounts list</a></button>
-<table class="content-table">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">Add or deduct funds</div>
+                <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a class="btn btn-outline-success mb-2" href="{{route('accounts-index')}}">Back to the accounts list</a>
+                </div>
+<table class="table table-hover">
     <thead>
         <tr>
-            <th>IBAN</th>
-            <th>NAME</th>
-            <th>SURNAME</th>
-            <th>PERSONAL ID</th>
-            <th>FUNDS</th>
-            <th>ADD FUNDS</th>
-            <th>DEDUCT FUNDS</th>
+            <th scope="col">IBAN</th>
+            <th scope="col">NAME</th>
+            <th scope="col">SURNAME</th>
+            <th scope="col">PERSONAL ID</th>
+            <th scope="col">FUNDS</th>
+            <th scope="col">ADD FUNDS</th>
+            <th scope="col">DEDUCT FUNDS</th>
         </tr>
     </thead>
     <form method="post" action="{{route('accounts-update', $account)}}">
